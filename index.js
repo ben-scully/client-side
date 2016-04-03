@@ -1,7 +1,7 @@
 var xhr = require('xhr')
 var example = require('./views/example.hbs')
 
-xhr.get('https://api.wheretheiss.at/v1/satellites', function(err, data) {
+xhr.get('https://api.wheretheiss.at/v1/satellites/25544', function(err, data) {
   if (err) {
     throw err
   }
@@ -13,7 +13,7 @@ xhr.get('https://api.wheretheiss.at/v1/satellites', function(err, data) {
 
 document.getElementById("wizardBtn").addEventListener("click", function(){
 
-    xhr.get('https://api.wheretheiss.at/v1/satellites', function(err, data) {
+    xhr.get('https://api.wheretheiss.at/v1/satellites/25544', function(err, data) {
       if (err) {
         throw err
       }
