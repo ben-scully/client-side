@@ -21,7 +21,7 @@ document.getElementById("wizardBtn").addEventListener("click", function(){
 
       console.log("Gets Name?: ", partObj.name)
 
-      var content = example( partObj )
+      var content = example( rawToObj )
       document.getElementById("wizardBox").innerHTML = content
     })
 })
