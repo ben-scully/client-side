@@ -17,7 +17,7 @@ document.getElementById("wizardBtn").addEventListener("click", function(){
     var rawToObj = JSON.parse(data.body)
     console.log("Raw To Obj: ", rawToObj)
 
-    console.log("NEW Name Test: ", rawToObj)
+    console.log("NEW Name Test: ", rawToObj.name)
 
     // var partObj = rawToObj[0]
     // console.log("Part Obj: ", partObj)
