@@ -12,8 +12,8 @@ document.getElementById("wizardBtn").addEventListener("click", function(){
       // For Testing
       console.log("Raw: ", data.body)
       var convertJSON = JSON.parse(data.body)
-      console.log("JSON'd: ", convertJSON)
-      var content = example( convertJSON )
+      console.log("JSON'd: ", convertJSON[0])
+      var content = example( convertJSON[0] )
       document.getElementById("wizardBox").innerHTML = content
     })
 })
