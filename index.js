@@ -10,9 +10,10 @@ document.getElementById("wizardBtn").addEventListener("click", function(){
         throw err
       }
       // For Testing
-      // console.log(data.body)
-
-      var content = example( data.body )
+      console.log("Raw: ", data.body)
+      var convertJSON = JSON.parse(data.body)
+      console.log("JSON'd: ", convertJSON)
+      var content = example( convertJSON )
       document.getElementById("wizardBox").innerHTML = content
     })
 })
