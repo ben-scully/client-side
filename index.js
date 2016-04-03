@@ -1,5 +1,6 @@
 var xhr = require('xhr')
-var example = require('./views/example.hbs')
+// var example = require('./views/example.hbs')
+var example = require('./views/jadeExample.jade')
 
 
 document.getElementById("wizardBtn").addEventListener("click", function(){
