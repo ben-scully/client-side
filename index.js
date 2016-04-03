@@ -11,7 +11,7 @@ xhr.get('https://api.wheretheiss.at/v1/satellites', function(err, data) {
 })
 
 
-document.getElementById("wizard").addEventListener("click", function(){
+document.getElementById("wizardBtn").addEventListener("click", function(){
 
     xhr.get('https://api.wheretheiss.at/v1/satellites', function(err, data) {
       if (err) {
