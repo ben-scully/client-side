@@ -21,6 +21,6 @@ document.getElementById("wizardBtn").addEventListener("click", function(){
       console.log(data.body)
 
       var content = data.body
-      document.getElementById("wizardBox").innerHTML = content
+      document.getElementById("wizardBox").innerHTML = example( content )
     })
 })
