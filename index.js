@@ -6,7 +6,7 @@ var example = require('./views/jadeExample.jade')
 document.getElementById("wizardBtn").addEventListener("click", function(){
 
     // 25544
-    xhr.get('https://api.wheretheiss.at/v1/satellites', function(err, data) {
+    xhr.get('https://api.wheretheiss.at/v1/satellites/25544', function(err, data) {
       if (err) {
         throw err
       }
