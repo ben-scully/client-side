@@ -15,9 +15,12 @@
 
     "buildAJAX": "browserify index.js -g uglifyify > bundle.js",
     "deployAJAX": "npm run buildAJAX && npm run dist && npm run push",
-    
+
     "buildJqueryAJAX": "browserify index.js -g uglifyify > bundle.js",
-    "deployJqueryAJAX": "npm run buildJqueryAJAX && npm run dist && npm run push"
+    "deployJqueryAJAX": "npm run buildJqueryAJAX && npm run dist && npm run push",
+
+    "buildWebpackJqueryAJAX": "webpack ./index.js -g uglifyify bundle.js",
+    "deployWebpackJqueryAJAX": "npm run buildWebpackJqueryAJAX && npm run dist && npm run push"
   },
   "keywords": [],
   "author": "",
