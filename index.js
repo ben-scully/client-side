@@ -1,30 +1,17 @@
 var xhr = require('xhr')
-// var example = require('./views/example.hbs')
-var example = require('./views/jadeExample.jade')
 
-
-document.getElementById("wizardBtn").addEventListener("click", function(){
+document.getElementById("wizardBtn").addEventListener("click", function () {
 
   console.log("Button Pressed --- ")
 
-  xhr.get('https://api.wheretheiss.at/v1/satellites/25544', function(err, data) {
-    if (err) {
-      throw err
+  var xhttp = new XMLHttpRequest()
+
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+     document.getElementById("wizardBox").innerHTML = xhttp.responseText
     }
-    // For Testing
-    console.log("Raw: ", data.body)
-
-    var rawToObj = JSON.parse(data.body)
-    console.log("Raw To Obj: ", rawToObj)
-
-    console.log("NEW Name Test: ", rawToObj.name)
-
-    // var partObj = rawToObj[0]
-    // console.log("Part Obj: ", partObj)
-
-    // console.log("Gets Name?: ", partObj.name)
-
-    var content = example( rawToObj )
-    document.getElementById("wizardBox").innerHTML = content
-  })
+  }
+  
+  xhttp.open("GET", 'https://api.wheretheiss.at/v1/satellites', true)
+  xhttp.send()
 })
