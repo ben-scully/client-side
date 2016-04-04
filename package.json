@@ -9,10 +9,13 @@
     "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css} dist'",
     "push": "gh-pages -d dist",
     "deploy": "npm run build && npm run dist && npm run push",
+
     "buildJade": "browserify -t jadeify index.js -g uglifyify > bundle.js",
     "deployJade": "npm run buildJade && npm run dist && npm run push",
+
     "buildAJAX": "browserify index.js -g uglifyify > bundle.js",
     "deployAJAX": "npm run buildAJAX && npm run dist && npm run push",
+    
     "buildJqueryAJAX": "browserify index.js -g uglifyify > bundle.js",
     "deployJqueryAJAX": "npm run buildJqueryAJAX && npm run dist && npm run push"
   },
