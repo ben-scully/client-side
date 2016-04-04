@@ -8,10 +8,11 @@ document.getElementById("wizardBtn").addEventListener("click", function () {
 
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
+      console.log("success: ", xhttp.responseText)
      document.getElementById("wizardBox").innerHTML = xhttp.responseText
     }
   }
-  
+
   xhttp.open("GET", 'https://api.wheretheiss.at/v1/satellites', true)
   xhttp.send()
 })
