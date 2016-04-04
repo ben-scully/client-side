@@ -1,18 +1,10 @@
-var xhr = require('xhr')
+var url = 'https://api.wheretheiss.at/v1/satellites'
 
 document.getElementById("wizardBtn").addEventListener("click", function () {
 
   console.log("Button Pressed --- ")
 
-  var xhttp = new XMLHttpRequest()
-
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      console.log("success: ", xhttp.responseText)
-     document.getElementById("wizardBox").innerHTML = xhttp.responseText
-    }
-  }
-
-  xhttp.open("GET", 'https://api.wheretheiss.at/v1/satellites', true)
-  xhttp.send()
+  $("#wizardBox").load(url, function (response, status ,xhr) {
+    console.log('load callback???')
+  })
 })
