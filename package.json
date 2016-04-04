@@ -10,7 +10,9 @@
     "push": "gh-pages -d dist",
     "deploy": "npm run build && npm run dist && npm run push",
     "buildJade": "browserify -t jadeify index.js -g uglifyify > bundle.js",
-    "deployJade": "npm run buildJade && npm run dist && npm run push"
+    "deployJade": "npm run buildJade && npm run dist && npm run push",
+    "buildAJAX": "browserify index.js -g uglifyify > bundle.js",
+    "deployAJAX": "npm run buildAJAX && npm run dist && npm run push"
   },
   "keywords": [],
   "author": "",
@@ -21,9 +23,11 @@
     "gh-pages": "^0.11.0",
     "handlebars": "^4.0.5",
     "hbsfy": "^2.5.1",
+    "hyperscript": "^1.4.7",
     "jade": "^1.11.0",
     "jadeify": "^4.6.0",
     "uglifyify": "^3.0.1",
+    "webpack": "^1.12.14",
     "xhr": "^2.2.0"
   },
   "dependencies": {
