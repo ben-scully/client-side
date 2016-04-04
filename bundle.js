@@ -32,6 +32,6 @@ var trim=require("trim"),forEach=require("for-each"),isArray=function(r){return"
 function extend(){for(var r={},e=0;e<arguments.length;e++){var t=arguments[e];for(var n in t)hasOwnProperty.call(t,n)&&(r[n]=t[n])}return r}module.exports=extend;var hasOwnProperty=Object.prototype.hasOwnProperty;
 
 },{}],11:[function(require,module,exports){
-var jade=require("jade/runtime");module.exports=function(e){var n,a=[],i=e||{};return function(e){a.push("<h1>Jade Hello "+jade.escape(null==(n=e)?"":n)+"</h1>")}.call(this,"name"in i?i.name:"undefined"!=typeof name?name:void 0),a.join("")};
+var jade=require("jade/runtime");module.exports=function(e){var n,a=[],d=e||{};return function(e,d){a.push("<h1>Jade Hello "+jade.escape(null==(n=d)?"":n)+" "+jade.escape(null==(n=e)?"":n)+"</h1>")}.call(this,"latitude"in d?d.latitude:"undefined"!=typeof latitude?latitude:void 0,"name"in d?d.name:"undefined"!=typeof name?name:void 0),a.join("")};
 
 },{"jade/runtime":2}]},{},[1]);
