@@ -32,6 +32,6 @@ var trim=require("trim"),forEach=require("for-each"),isArray=function(r){return"
 function extend(){for(var r={},e=0;e<arguments.length;e++){var t=arguments[e];for(var n in t)hasOwnProperty.call(t,n)&&(r[n]=t[n])}return r}module.exports=extend;var hasOwnProperty=Object.prototype.hasOwnProperty;
 
 },{}],11:[function(require,module,exports){
-var jade=require("jade/runtime");module.exports=function(e){var t,i=[],u=e||{};return function(e){i.push("<h1>Jade Hello "+jade.escape(null==(t=e)?"":t)+"</h1>")}.call(this,"latitude"in u?u.latitude:"undefined"!=typeof latitude?latitude:void 0),i.join("")};
+var jade=require("jade/runtime");module.exports=function(e){var i,t=[],n=e||{};return function(e,n){t.push("<h1>Jade Hello "+jade.escape(null==(i=e)?"":i)+" "+jade.escape(null==(i=n)?"":i)+"</h1>")}.call(this,"latitude"in n?n.latitude:"undefined"!=typeof latitude?latitude:void 0,"units"in n?n.units:"undefined"!=typeof units?units:void 0),t.join("")};
 
 },{"jade/runtime":2}]},{},[1]);
